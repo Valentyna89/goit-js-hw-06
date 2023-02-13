@@ -13,7 +13,7 @@ console.log(categoriesList);
 ingredients.forEach((elem) => {
   const newLi = document.createElement("li");
   newLi.textContent = elem;
-  newLi.classList.add("item");
+  newLi.classList.add('item');
 
   categoriesList.append(newLi);
 });
