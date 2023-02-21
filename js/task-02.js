@@ -10,10 +10,8 @@ const ingredients = [
 const categoriesList = document.querySelector("#ingredients");
 console.log(categoriesList);
 
-ingredients.forEach((elem) => {
-  const newLi = document.createElement("li");
-  newLi.textContent = elem;
-  newLi.classList.add('item');
+const newLis = ingredients
+  .map((elem) => `<li class='item'>${elem}</li>`)
+  .join("");
 
-  categoriesList.append(newLi);
-});
+categoriesList.insertAdjacentHTML("afterbegin", newLis);
